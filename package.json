@@ -7,10 +7,10 @@
   "author": "",
   "license": "",
   "private": false,
+  "homepage": "https://allan-viveiros.github.io/037b2258",  
   "engines": {
     "node": "16.0.0"
-  },
-  "homepage": "https://allan-viveiros.github.io/037b2258",  
+  },  
   "scripts": { 
     "start": "webpack serve --open --mode development", 
     "build": "webpack --mode production", 
