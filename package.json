@@ -10,13 +10,13 @@
   "engines": {
     "node": "16.0.0"
   },
-  "homepage": "https://allan-viveiros.github.io/037b2258",
-  "scripts": {    
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
+  "homepage": "https://allan-viveiros.github.io/037b2258",  
+  "scripts": { 
+    "start": "webpack serve --open --mode development", 
+    "build": "webpack --mode production", 
     "predeploy": "npm run build", 
-    "deploy": "gh-pages -d dist"
-  },
+    "deploy": "gh-pages -d dist" 
+  },  
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
