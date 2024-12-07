@@ -1,0 +1,113 @@
+.call-list {
+    list-style: none;
+    height: 445px;
+    /* overflow: hidden; */
+}
+
+.call-list li {
+    border: 1px solid #0000000f;
+    margin: 10px 0;
+    width: 282px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.call-list li .list-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    gap: 5px;
+    font-weight: 900;
+    color: #8d8d8d;
+    font-size: 15px;
+}
+
+.call-list li .list-content .details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    gap: 5px;
+}
+
+.call-list li .list-content .details .call-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    gap: 5px;
+}
+
+.call-list li .button-single {
+    /* border: 1px solid #00ff00; */
+}
+
+.call-list li .list-content .list-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+    margin-right: 5px;
+    font-weight: lighter;
+    color: #b1b1b1;
+    font-size: 12px;
+}
+
+.icon-blue {
+    color: #2980B9;
+}
+.icon-green {
+    color: #00B894;
+}
+.icon-red {
+    color: #C0392B;
+}
+
+
+/* path {
+    color: #007bff;
+} */
+
+/* Green
+Mint Green: #00B894
+
+Emerald Green: #2ECC71
+
+Olive Green: #3D9970
+
+Blue
+Sky Blue: #3498DB
+
+Ocean Blue: #2980B9
+
+Navy Blue: #2C3E50
+
+Red
+Coral Red: #E74C3C
+
+Tomato Red: #D35400
+
+Crimson Red: #C0392B */
+
+/* Cardboard Box Yellow
+Kraft Paper Yellow: #D2B48C
+
+Mustard Yellow: #FFDB58
+
+Goldenrod Yellow: #DAA520 */

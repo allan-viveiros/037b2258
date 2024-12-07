@@ -1,0 +1,53 @@
+.hide {
+    display: none;
+}
+
+.content-section .button-big {
+    /* border: 1px solid #000; */
+    width: 290px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.content-section .button-big .button-all {
+    border: 1px solid #0000000f;
+    margin: 0;
+    width: 162px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #e5e5e5;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* margin: 5px auto; */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+.content-section .button-big .button-all:hover {
+    background-color: #d3d3d3;
+    /* color: #fff; */
+}
+
+.icon-yellow {
+    color: #DAA520;
+}
+
+.call-list .button-single {
+    cursor: pointer;
+}
+.call-list .button-single .icon-yellow:hover {
+    color: #FFDB58;
+    margin-bottom: 2px;
+}
+
+
