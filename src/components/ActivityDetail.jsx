@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ArchiveButton from "./ArchiveButton.jsx";
 import "../css/activitydetail.css";
 
-//
+// Font Awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVoicemail } from "@fortawesome/free-solid-svg-icons";
 import { faPhoneSlash } from "@fortawesome/free-solid-svg-icons";
@@ -14,6 +14,8 @@ import { faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 // callData => array contained all calls 
 // actionType => "activeCalls" = for active calls | "archivedCalls" = for archived calls | "all" = For all calls
 // handleArchiveButton => to handle the button click to Archive & unarchive calls
+// isSingleCall => True | false = to inform if the action is for one single element or for the whole list 
+
 const ActivityDetail = (props) => {
     const[filter, setFilter] = useState([]);
     const[dateFilter, setDateFilter] = useState([]);
@@ -38,8 +40,8 @@ const ActivityDetail = (props) => {
             }
         }
 
-        callsFilter();        
-
+        callsFilter();
+        
     }, [props.callData]);
     
   
