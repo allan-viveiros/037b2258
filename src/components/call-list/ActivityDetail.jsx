@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ArchiveButton from "./ArchiveButton.jsx";
-import "../css/activitydetail.css";
+import "./styles/activitydetail.css";
 
 // Font Awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,13 +10,11 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 
-// This component should receive 3 parameters:
+// This component should receive 2 parameters:
 // callData => array contained all calls 
 // actionType => "activeCalls" = for active calls | "archivedCalls" = for archived calls | "all" = For all calls
-// handleArchiveButton => to handle the button click to Archive & unarchive calls
-// isSingleCall => True | false = to inform if the action is for one single element or for the whole list 
 
-const ActivityDetail = (props) => {
+const ActivityDetail = ( {callData, actionType} ) => {
     const[filter, setFilter] = useState([]);
     const[dateFilter, setDateFilter] = useState([]);
     const[isArchived, setIsArchived] = useState();
@@ -24,25 +22,25 @@ const ActivityDetail = (props) => {
 
     useEffect(() => {
         const callsFilter = () => {
-            if(props.actionType === "activeCalls") {
-                const newArray = props.callData.filter(item => item.is_archived === false); 
+            if(actionType === "activeCalls") {
+                const newArray = callData.filter(item => item.is_archived === false); 
                 setFilter(newArray);
                 setIsArchived(false);
             }
-            else if(props.actionType === "archivedCalls") {
-                const newArray = props.callData.filter(item => item.is_archived === true);
+            else if(actionType === "archivedCalls") {
+                const newArray = callData.filter(item => item.is_archived === true);
                 setFilter(newArray);
                 setIsArchived(true);
             }
             else {
-                setFilter(props.callData);
+                setFilter(callData);
                 setHide(true);
             }
         }
 
         callsFilter();
         
-    }, [props.callData]);
+    }, [callData]);
     
   
     useEffect(() => {
@@ -77,7 +75,7 @@ const ActivityDetail = (props) => {
     return (
         <section className="content-section">
             <div className="button-big">
-                <ArchiveButton id={0} isArchived={isArchived} isSingleCall={false} handleArchiveButton={props.handleArchiveButton} hide={hide} />
+                <ArchiveButton id={0} isArchived={isArchived} isSingleCall={false} hide={hide} />
             </div>
             
             <ul className="call-list">               
@@ -107,7 +105,7 @@ const ActivityDetail = (props) => {
                                     </div>                       
                                 </div>
 
-                                <ArchiveButton id={call.id} isArchived={call.is_archived} isSingleCall={true} handleArchiveButton={props.handleArchiveButton} hide={hide} />
+                                <ArchiveButton id={call.id} isArchived={call.is_archived} isSingleCall={true} hide={hide} />
                             </li>                           
                         )
                     })

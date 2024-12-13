@@ -50,7 +50,7 @@
 .tab-content {
     padding: 20px;
     transition: opacity 0.3s ease;
-    background-color: #eeeeee;
+    background-color: #fff;
     border: 1px solid #0000000f;
     overflow: hidden;
     height: 465px;
